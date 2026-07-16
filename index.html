@@ -679,7 +679,7 @@ const CONFIG = {
   bride: { name: "이서연", tel: "010-8765-4321" },
 
   venue: {
-    name: "벡스코",
+    name: "w웨딩 벡스코웨딩홀",
     address: "부산 해운대구 APEC로 55 벡스코 제 1전시장 지하1층",
     lat: 35.1690637154991,
     lng: 129.136018268316,
@@ -793,7 +793,7 @@ CONFIG.photos.gallery.forEach((src, i) => {
 
   // 길찾기 링크는 API 키 없이도 동작합니다
   document.getElementById("naverMap").href =
-    `https://map.naver.com/p/search/${encodeURIComponent(address)}`;
+    `https://map.naver.com/p/search/${encodeURIComponent(name)}`;
   document.getElementById("kakaoMap").href =
     `https://map.kakao.com/link/to/${encodeURIComponent(name)},${lat},${lng}`;
   document.getElementById("tmap").href =
