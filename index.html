@@ -679,10 +679,10 @@ const CONFIG = {
   bride: { name: "이서연", tel: "010-8765-4321" },
 
   venue: {
-    name: "그랜드컨벤션",
-    address: "서울특별시 강남구 테헤란로 123",
-    lat: 37.4979,
-    lng: 127.0276,
+    name: "벡스코",
+    address: "부산 해운대구 APEC로 55 벡스코 제 1전시장 지하1층",
+    lat: 35.1690637154991,
+    lng: 129.136018268316,
   },
 
   // 배포 주소. 카카오톡 공유 메시지의 링크로 쓰입니다.
@@ -799,10 +799,8 @@ CONFIG.photos.gallery.forEach((src, i) => {
   document.getElementById("tmap").href =
     `https://apis.openapi.sk.com/tmap/app/routes?appKey=&name=${encodeURIComponent(name)}&lon=${lng}&lat=${lat}`;
 
-  // 카카오맵 JS SDK를 쓰려면 아래 KAKAO_JS_KEY에 키를 넣으세요.
-  // https://developers.kakao.com → 앱 만들기 → JavaScript 키
-  // → 플랫폼 > Web 에 배포 도메인 등록 필수
-  const KAKAO_JS_KEY = "";
+  // 공유 버튼과 같은 JavaScript 키를 씁니다 (CONFIG.kakaoJsKey)
+  const KAKAO_JS_KEY = CONFIG.kakaoJsKey;
 
   if (!KAKAO_JS_KEY) {
     box.style.display = "grid";
